@@ -9,7 +9,7 @@ const SearchHeader = memo(
       onSearch(value);
     }
   
-    const onClick = (event) => {
+    const onClick = () => {
       handleSearch();
     }
   
