@@ -3,10 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './app';
 import reportWebVitals from './reportWebVitals';
+// business logic 을 담음 js 파일
+import Youtube from './service/youtube';
+
+// google youtube api key 를 .env 파일에 작성 후 key 사용
+const youtube = new Youtube(process.env.REACT_APP_YOUTUBE_API_KEY);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App youtube={youtube} />
   </React.StrictMode>,
   document.getElementById('root')
 );

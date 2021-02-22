@@ -6,6 +6,10 @@
   color: white;
 }
 
+.img {
+  margin-right: 0.5em;
+}
+
 .logo {
   display: flex;
   align-items: center;
