@@ -1,3 +1,4 @@
+// axios 사용
 import axios from 'axios';
 
 class Youtube {
@@ -21,7 +22,7 @@ class Youtube {
   }
 
   async search(query) {
-    const response = await this.youtube.get('videos', {
+    const response = await this.youtube.get('search', {
       params: {
         part: 'snippet',
         maxResults: 24,

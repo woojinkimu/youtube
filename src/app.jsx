@@ -21,6 +21,13 @@ function App({youtube}) {
     });
   }, [youtube]);
 
+  const logoClick = () => {
+    youtube
+    .mostPopular()
+    .then(videos => setVideos(videos))
+    .then(setSelectedVideo(null));
+  }
+
   // useEffect 는 componentDidMount, componentDidUpdate 의 역할
   useEffect(()=>{
     youtube
@@ -30,7 +37,7 @@ function App({youtube}) {
 
   return (
     <div className={styles.app}>
-      <SearchHeader onSearch={search} />
+      <SearchHeader onSearch={search} logoClick={logoClick} />
       <section className={styles.content}>
         {selectedVideo && <div className={styles.detail}>
           <VideoDetail video={selectedVideo} />

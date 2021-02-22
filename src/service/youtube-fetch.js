@@ -1,3 +1,5 @@
+// fetch 사용
+
 class YoutubeFetch {
   constructor(key) {
     this.key = key;
